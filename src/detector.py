@@ -32,7 +32,7 @@ class OutlierClassifier:
         # Optional: You can still return a Pandas DataFrame at the very end
         # because returning a neat table of results is what users expect.
         import pandas as pd
-        return pd.DataFrame(results).sort_values(by="score", ascending=False)
+        return pd.DataFrame(results)
     
     def fit_predict_one(self, index_outlier, delta=0.05, verbose=False):
         # Remove the outlier from the dataset and create the similarity matrix
